@@ -1,4 +1,4 @@
-package com.android.ch13
+package com.android.ch14_receiver
 
 import org.junit.Test
 
