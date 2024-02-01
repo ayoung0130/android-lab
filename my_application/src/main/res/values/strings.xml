@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Kakao Image</string>
+    <string name="search">Search</string>
+    <string name="bookmark">Bookmark</string>
+
+    <array name="tab_title">
+        <item>@string/search</item>
+        <item>@string/bookmark</item>
+    </array>
+
+    <array name="tab_icon">
+        <item>@drawable/ic_image_search</item>
+        <item>@drawable/ic_book</item>
+    </array>
+</resources>
