@@ -22,8 +22,8 @@
             <option value="$PROJECT_DIR$/ch7_layout" />
             <option value="$PROJECT_DIR$/ch8_event" />
             <option value="$PROJECT_DIR$/coroutine" />
+            <option value="$PROJECT_DIR$/mediapipe" />
             <option value="$PROJECT_DIR$/my_application" />
-            <option value="$PROJECT_DIR$/video_capture" />
           </set>
         </option>
       </GradleProjectSettings>
