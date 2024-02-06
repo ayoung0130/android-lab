@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/permissions_fragment"
-        android:name="com.google.mediapipe.examples.handlandmarker.fragment.PermissionsFragment"
+        android:name="com.android.mediapipe.fragment.PermissionsFragment"
         android:label="PermissionsFragment">
 
         <action
@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/camera_fragment"
-        android:name="com.google.mediapipe.examples.handlandmarker.fragment.CameraFragment"
+        android:name="com.android.mediapipe.fragment.CameraFragment"
         android:label="CameraFragment">
 
         <action
@@ -31,6 +31,6 @@
 
     <fragment
         android:id="@+id/gallery_fragment"
-        android:name="com.google.mediapipe.examples.handlandmarker.fragment.GalleryFragment"
+        android:name="com.android.mediapipe.fragment.GalleryFragment"
         android:label="GalleryFragment" />
 </navigation>

@@ -19,7 +19,6 @@ class OverlayView(context: Context?, attrs: AttributeSet?) :
     private var results: HandLandmarkerResult? = null
     private var linePaint = Paint()
     private var pointPaint = Paint()
-
     private var scaleFactor: Float = 1f
     private var imageWidth: Int = 1
     private var imageHeight: Int = 1
