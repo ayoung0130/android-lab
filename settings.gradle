@@ -14,7 +14,7 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "AndroidLab"
-include ':app'
+include ':app_'
 include ':calculator'
 include ':Ch6_view'
 include ':ch7_layout'
@@ -28,3 +28,4 @@ include ':base'
 include ':coroutine'
 include ':mediapipe'
 include ':handlandmark'
+include ':camera'

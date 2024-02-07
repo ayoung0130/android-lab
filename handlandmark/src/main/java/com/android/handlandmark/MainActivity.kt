@@ -17,18 +17,19 @@ import com.android.handlandmark.databinding.ActivityMainBinding
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.TimeUnit
 import android.Manifest
+import androidx.lifecycle.ViewModelProvider
+import java.util.concurrent.Executors
 
 class MainActivity : AppCompatActivity(), HandLandmarkerHelper.LandmarkerListener {
 
     private lateinit var handLandmarkerHelper: HandLandmarkerHelper
+    private lateinit var mainViewModel: MainViewModel
     private lateinit var preview: Preview
     private lateinit var imageAnalyzer: ImageAnalysis
     private lateinit var camera: Camera
     private lateinit var cameraProvider: ProcessCameraProvider
     private var cameraFacing = CameraSelector.LENS_FACING_FRONT
-
     private lateinit var backgroundExecutor: ExecutorService
-
     private var _activityMainBinding: ActivityMainBinding? = null
     private val activityMainBinding get() = _activityMainBinding!!
 
@@ -36,6 +37,8 @@ class MainActivity : AppCompatActivity(), HandLandmarkerHelper.LandmarkerListene
         super.onCreate(savedInstanceState)
         _activityMainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(activityMainBinding.root)
+
+        mainViewModel = ViewModelProvider(this)[MainViewModel::class.java]
 
         if (allPermissionsGranted()) {
             startCamera()
@@ -53,6 +56,7 @@ class MainActivity : AppCompatActivity(), HandLandmarkerHelper.LandmarkerListene
             cameraProvider = cameraProviderFuture.get()
             bindCameraUseCases()
         }, ContextCompat.getMainExecutor(this))
+        backgroundExecutor = Executors.newSingleThreadExecutor()
     }
 
     private fun bindCameraUseCases() {
