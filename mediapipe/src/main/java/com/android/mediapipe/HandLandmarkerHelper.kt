@@ -7,8 +7,8 @@ import android.media.MediaMetadataRetriever
 import android.net.Uri
 import android.os.SystemClock
 import android.util.Log
+import androidx.annotation.VisibleForTesting
 import androidx.camera.core.ImageProxy
-import com.google.common.annotations.VisibleForTesting
 import com.google.mediapipe.framework.image.BitmapImageBuilder
 import com.google.mediapipe.framework.image.MPImage
 import com.google.mediapipe.tasks.core.BaseOptions
@@ -23,10 +23,10 @@ class HandLandmarkerHelper(
     var minHandPresenceConfidence: Float = DEFAULT_HAND_PRESENCE_CONFIDENCE,
     var maxNumHands: Int = DEFAULT_NUM_HANDS,
     var currentDelegate: Int = DELEGATE_CPU,
-    private var runningMode: RunningMode = RunningMode.IMAGE,
-    private val context: Context,
+    var runningMode: RunningMode = RunningMode.IMAGE,
+    val context: Context,
     // this listener is only used when running in RunningMode.LIVE_STREAM
-    private val handLandmarkerHelperListener: LandmarkerListener? = null
+    val handLandmarkerHelperListener: LandmarkerListener? = null
 ) {
 
     // For this example this needs to be a var so it can be reset on changes.
