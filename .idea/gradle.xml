@@ -25,6 +25,7 @@
             <option value="$PROJECT_DIR$/ch8_event" />
             <option value="$PROJECT_DIR$/mediapipe" />
             <option value="$PROJECT_DIR$/my_application" />
+            <option value="$PROJECT_DIR$/tensorflowlite" />
           </set>
         </option>
       </GradleProjectSettings>
